@@ -1,3 +1,9 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
 .navbar {
   position: fixed;
   top: 0;
@@ -10,12 +16,22 @@
   );
   display: flex;
   align-items: center;
+  justify-content: space-between;
   padding: 0 40px;
   z-index: 1000;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
 }
 
 .nav-left {
   margin-right: 40px;
+  flex-shrink: 0;
+}
+
+/* Fix for logo link */
+.nav-left a {
+  text-decoration: none;
+  color: inherit;
 }
 
 .logo {
@@ -23,6 +39,7 @@
   font-weight: 800;
   font-size: 18px;
   letter-spacing: 1.2px;
+  white-space: nowrap;
 }
 
 .nav-links {
@@ -30,6 +47,9 @@
   display: flex;
   gap: 28px;
   flex: 1;
+  min-width: 0;
+  margin: 0;
+  padding: 0;
 }
 
 .nav-links a {
@@ -39,6 +59,7 @@
   font-weight: 600;
   position: relative;
   transition: color 0.25s ease;
+  white-space: nowrap;
 }
 
 .nav-links a::after {
@@ -71,6 +92,7 @@
 .nav-right {
   display: flex;
   align-items: center;
+  flex-shrink: 0;
 }
 
 .nav-right img {
@@ -86,3 +108,69 @@
 .nav-right img:hover {
   border-color: #ffffff;
 }
+
+.nav-toggle {
+  display: none;
+  background: transparent;
+  border: 0;
+  color: #ffffff;
+  font-size: 28px;
+  cursor: pointer;
+  line-height: 1;
+}
+
+@media (max-width: 900px) {
+  .navbar {
+    padding: 0 16px;
+    height: 60px;
+  }
+
+  .nav-left {
+    margin-right: 0;
+  }
+
+  .logo {
+    font-size: 15px;
+    letter-spacing: 0.6px;
+  }
+
+  .nav-toggle {
+    display: block;
+    margin-left: auto;
+    margin-right: 10px;
+  }
+
+  .nav-links {
+    position: absolute;
+    top: 60px;
+    left: 0;
+    right: 0;
+    display: none;
+    flex-direction: column;
+    gap: 12px;
+    padding: 14px 16px 18px;
+    background: rgba(0, 0, 0, 0.96);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+  }
+
+  .nav-links.open {
+    display: flex;
+  }
+
+  .nav-links a {
+    font-size: 15px;
+    padding: 8px 6px;
+  }
+
+  .nav-links a::after {
+    bottom: 2px;
+  }
+
+  .nav-right img {
+    width: 28px;
+    height: 28px;
+  }
+}
+
+
+

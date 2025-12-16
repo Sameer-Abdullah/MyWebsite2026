@@ -1,13 +1,10 @@
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-}
 
 body {
   background: #0b0b0b;
   color: white;
-  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
+    Roboto, Helvetica, Arial, sans-serif;
+
 }
 
 
@@ -166,6 +163,25 @@ main {
   border-color: rgba(255, 255, 255, 0.6);
 }
 
+@media (max-width: 768px) {
+  .picks-inner {
+    padding: 0 24px;
+  }
 
+  .picks-grid {
+    grid-template-columns: repeat(2, 1fr); 
+    gap: 20px;
+  }
+
+  .pick-card {
+    height: 200px; 
+  }
+
+  .pick-label {
+    font-size: 12px;
+    right: 12px;
+    bottom: 12px;
+  }
+}
 
 

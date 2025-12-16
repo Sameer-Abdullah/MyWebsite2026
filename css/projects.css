@@ -16,26 +16,72 @@
 }
 
 body {
-  background: radial-gradient(
-      900px 520px at 18% -10%,
-      rgba(229, 9, 20, 0.16),
-      transparent 60%
-    ),
-    radial-gradient(
-      700px 420px at 90% 0%,
-      rgba(255, 255, 255, 0.05),
-      transparent 55%
-    ),
+  background:
+    radial-gradient(900px 520px at 18% -10%, rgba(229, 9, 20, 0.16), transparent 60%),
+    radial-gradient(700px 420px at 90% 0%, rgba(255, 255, 255, 0.05), transparent 55%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    sans-serif;
+  font-family: "Inter", ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto,
+    Arial, sans-serif;
 }
 
 .wrap {
   max-width: 1320px;
   margin: 0 auto;
   padding: 110px 24px 80px;
+}
+
+.page-header {
+  position: relative;
+  padding: 26px 0;
+  margin-bottom: 18px;
+}
+
+.page-header::before {
+  content: "";
+  position: absolute;
+  left: -18px;
+  right: -18px;
+  top: -18px;
+  height: 180px;
+  background:
+    radial-gradient(600px 220px at 20% 20%, rgba(229, 9, 20, 0.20), transparent 60%),
+    linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent);
+  border-radius: 18px;
+  pointer-events: none;
+}
+
+.page-kicker {
+  color: rgba(255, 255, 255, 0.68);
+  letter-spacing: 0.28em;
+  font-weight: 900;
+  font-size: 0.78rem;
+}
+
+.page-title {
+  margin-top: 10px;
+  font-size: clamp(2.15rem, 4vw, 3.15rem);
+  font-weight: 750;
+  letter-spacing: -0.03em;
+  line-height: 1.06;
+}
+
+.page-title::after {
+  content: "";
+  display: block;
+  width: 110px;
+  height: 4px;
+  margin-top: 12px;
+  border-radius: 999px;
+  background: linear-gradient(90deg, var(--accent), rgba(229, 9, 20, 0.25));
+}
+
+.page-subtitle {
+  margin-top: 12px;
+  max-width: 70ch;
+  color: rgba(243, 243, 243, 0.68);
+  font-size: 1.05rem;
+  line-height: 1.45;
 }
 
 .cta {
@@ -47,9 +93,10 @@ body {
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 16px;
-  padding: 24px 24px;
+  padding: 24px;
 
   box-shadow: var(--shadow);
+  margin-top: 22px;
 }
 
 .cta h1 {
@@ -129,7 +176,7 @@ body {
 }
 
 .card {
-  position: relative; 
+  position: relative;
   background: var(--panel);
   border: 1px solid var(--border);
   border-radius: 18px;
@@ -142,7 +189,6 @@ body {
 
   transition: transform 0.35s ease, box-shadow 0.35s ease;
 }
-
 
 .card::after {
   content: "";
@@ -171,7 +217,7 @@ body {
   position: relative;
   height: 210px;
   background: rgba(255, 255, 255, 0.03);
-  overflow: hidden; 
+  overflow: hidden;
 }
 
 .thumb img {

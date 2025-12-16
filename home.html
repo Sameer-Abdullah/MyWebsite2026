@@ -7,15 +7,28 @@
     <link rel="stylesheet" href="css/home.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="icon" type="image/jpg" href="images/me/me.jpg" />
+    <link rel="icon" type="image/jpg" href="images/me/me.jpg" />
   </head>
 
   <body>
     <nav class="navbar">
       <div class="nav-left">
-        <span class="logo">SAMEER ABDULLAH</span>
+        <a href="home.html">
+          <span class="logo">SAMEER ABDULLAH</span>
+        </a>
       </div>
 
-      <ul class="nav-links">
+      <button
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="home.html" class="active">Home</a></li>
         <li><a href="experience.html">Work Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
@@ -81,7 +94,7 @@
           <div class="picks-grid">
             <a
               class="pick-card"
-              href="#skills"
+              href="skills.html"
               style="background-image: url('images/picks/skills.jpg')"
             >
               <span class="pick-label">Skills</span>
@@ -89,7 +102,7 @@
 
             <a
               class="pick-card"
-              href="#experience"
+              href="experience.html"
               style="background-image: url('images/picks/experience.jpg')"
             >
               <span class="pick-label">Experience</span>
@@ -97,7 +110,7 @@
 
             <a
               class="pick-card"
-              href="#certificates"
+              href="awards.html"
               style="background-image: url('images/picks/certificates.jpg')"
             >
               <span class="pick-label">Certificates</span>
@@ -105,7 +118,7 @@
 
             <a
               class="pick-card"
-              href="#awards"
+              href="awards.html"
               style="background-image: url('images/picks/awards.jpg')"
             >
               <span class="pick-label">Awards</span>
@@ -113,7 +126,7 @@
 
             <a
               class="pick-card"
-              href="#projects"
+              href="projects.html"
               style="background-image: url('images/picks/projects.jpg')"
             >
               <span class="pick-label">Projects</span>
@@ -121,7 +134,7 @@
 
             <a
               class="pick-card"
-              href="#contact"
+              href="contact.html"
               style="background-image: url('images/picks/contact.jpg')"
             >
               <span class="pick-label">Contact Me</span>
@@ -155,5 +168,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/navbar.js"></script>
   </body>
 </html>

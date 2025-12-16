@@ -8,16 +8,28 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="icon" type="image/jpg" href="images/me/me.jpg" />
   </head>
 
   <body>
     <nav class="navbar">
       <div class="nav-left">
-        <span class="logo">SAMEER ABDULLAH</span>
+        <a href="home.html">
+          <span class="logo">SAMEER ABDULLAH</span>
+        </a>
       </div>
 
-      <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
+      <button
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="home.html">Home</a></li>
         <li><a href="experience.html">Work Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html" class="active">Projects</a></li>
@@ -31,8 +43,16 @@
         </a>
       </div>
     </nav>
-
     <main class="wrap">
+      <header class="page-header">
+        <p class="page-kicker">PROJECTS</p>
+        <h1 class="page-title">Projects</h1>
+        <p class="page-subtitle">
+          A selection of academic, personal, and hands-on projects I’ve built
+          and worked on.
+        </p>
+      </header>
+
       <section class="grid" aria-label="Spotlight Builds">
         <!-- 1 -->
         <article class="card">
@@ -230,5 +250,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/navbar.js"></script>
   </body>
 </html>

@@ -7,15 +7,27 @@
     <link rel="stylesheet" href="css/skills.css" />
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="icon" type="image/jpg" href="images/me/me.jpg" />
   </head>
 
   <body>
     <nav class="navbar">
       <div class="nav-left">
-        <span class="logo">SAMEER ABDULLAH</span>
+        <a href="home.html">
+          <span class="logo">SAMEER ABDULLAH</span>
+        </a>
       </div>
 
-      <ul class="nav-links">
+      <button
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
         <li><a href="home.html">Home</a></li>
         <li><a href="experience.html">Work Experience</a></li>
         <li><a href="skills.html" class="active">Skills</a></li>
@@ -26,16 +38,16 @@
 
       <div class="nav-right">
         <a href="select.html">
-          <img src="images/recuriter.jpg" alt="Profile" />
+          <img src="/images/recuriter.jpg" alt="Profile" />
         </a>
       </div>
     </nav>
 
     <main class="wrap">
-      <header class="hero" id="skills">
-        <p class="kicker">SKILLSET</p>
-        <h1 class="title">Skills & Tools</h1>
-        <p class="subtitle">
+      <header class="page-header" id="skills">
+        <p class="page-kicker">SKILLSET</p>
+        <h1 class="page-title">Skills & Tools</h1>
+        <p class="page-subtitle">
           The stack I’m strongest in, plus what I use to ship projects faster.
         </p>
       </header>
@@ -224,5 +236,6 @@
         </div>
       </div>
     </footer>
+    <script src="js/navbar.js"></script>
   </body>
 </html>

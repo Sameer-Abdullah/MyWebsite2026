@@ -4,6 +4,16 @@
   box-sizing: border-box;
 }
 
+body {
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+}
+
 body.profiles-page {
   background: #141414;
   color: #ffffff;
@@ -13,17 +23,22 @@ body.profiles-page {
   flex-direction: column;
   align-items: center;
   justify-content: center;
+  padding: 24px 16px; 
 }
 
 .title {
   font-size: 48px;
   font-weight: 500;
   margin-bottom: 60px;
+  text-align: center;
 }
 
 .profiles {
   display: flex;
   gap: 50px;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap; 
 }
 
 .profile {
@@ -55,3 +70,33 @@ body.profiles-page {
 .profile:hover span {
   color: #ffffff;
 }
+
+
+@media (max-width: 600px) {
+  body.profiles-page {
+    justify-content: flex-start; 
+    padding: 48px 16px;
+  }
+
+  .title {
+    font-size: 28px;
+    margin-bottom: 28px;
+  }
+
+  .profiles {
+    flex-direction: column; 
+    gap: 22px;
+  }
+
+  .profile img {
+    width: 130px;
+    height: 130px;
+    border-width: 3px;
+  }
+
+  .profile span {
+    font-size: 16px;
+    margin-top: 10px;
+  }
+}
+
