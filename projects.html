@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/projects.css" />
     <link rel="stylesheet" href="css/footer.css" />
+    <link rel="stylesheet" href="css/musicplayer.css" />
     <link rel="icon" type="image/jpg" href="images/me/me.jpg" />
   </head>
 
@@ -225,6 +226,39 @@
         </article>
       </section>
     </main>
+    <div class="music-player">
+      <div class="player-main">
+        <div class="artist-container">
+          <img
+            src="images/artists/cn-tower.jpg"
+            alt="Artist"
+            class="artist-thumb"
+            id="artist-img"
+          />
+        </div>
+        <div class="player-info">
+          <div class="player-details">
+            <span id="track-name">Loading...</span>
+            <span id="artist-name">Drake</span>
+          </div>
+          <div class="progress-wrapper">
+            <span id="current-time">0:00</span>
+            <div class="progress-container" id="progress-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+
+      <audio id="bg-music"></audio>
+    </div>
     <footer class="footer">
       <div class="footer-inner">
         <div class="footer-left">
@@ -251,5 +285,6 @@
       </div>
     </footer>
     <script src="js/navbar.js"></script>
+    <script src="js/musicplayer.js"></script>
   </body>
 </html>
