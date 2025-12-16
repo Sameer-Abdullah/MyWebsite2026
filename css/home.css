@@ -1,12 +1,9 @@
-
 body {
   background: #0b0b0b;
   color: white;
-  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI",
-    Roboto, Helvetica, Arial, sans-serif;
-
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto,
+    Helvetica, Arial, sans-serif;
 }
-
 
 main {
   padding-top: 68px;
@@ -136,7 +133,17 @@ main {
   background-size: cover;
   background-position: center;
   border: 1px solid rgba(255, 255, 255, 0.08);
+  background-repeat: no-repeat;
 }
+
+/* INDIVIDUAL IMAGE CLASSES */
+.pick-skills { background-image: url('../images/picks/skills.jpg'); }
+.pick-exp { background-image: url('../images/picks/experience.jpg'); }
+.pick-cert { background-image: url('../images/picks/certificates.jpg'); }
+.pick-awards { background-image: url('../images/picks/awards.jpg'); }
+.pick-proj { background-image: url('../images/picks/projects.jpg'); }
+.pick-contact { background-image: url('../images/picks/contact.jpg'); }
+
 
 .pick-card::after {
   content: "";
@@ -169,12 +176,12 @@ main {
   }
 
   .picks-grid {
-    grid-template-columns: repeat(2, 1fr); 
+    grid-template-columns: repeat(2, 1fr);
     gap: 20px;
   }
 
   .pick-card {
-    height: 200px; 
+    height: 200px;
   }
 
   .pick-label {
@@ -183,5 +190,3 @@ main {
     bottom: 12px;
   }
 }
-
-
