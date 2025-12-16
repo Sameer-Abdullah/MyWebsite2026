@@ -1,11 +1,9 @@
 const songs = [
     { name: "CN Tower", artist: "Drake", path: "audio/cn-tower-drake.mp3", img: "images/artists/cn-tower.jpg" },
     { name: "Hotline Bling", artist: "Drake", path: "audio/hotline-drake.mp3", img: "images/artists/hotline.jpg" },
+    { name: "Laugh Now", artist: "Drake", path: "audio/laughnow-crylater-drake.mp3", img: "images/artists/laughnow.jpg" },
+    { name: "Nokia", artist: "Drake", path: "audio/nokia-drake.mp3", img: "images/artists/nokia.jpg" },
     { name: "Passionfruit", artist: "Drake", path: "audio/passionfruit-drake.mp3", img: "images/artists/passionfruit.jpg" },
-    { name: "Laugh Now Cry Later", artist: "Drake", path: "audio/laughnow-crylater-drake.mp3", img: "images/artists/laughnow.jpg" },
-    { name: "Nokia", artist: "Drake", path: "audio/nokia-drake.mp3", img: "images/artists/nokia.jpg" }
-
-
 ];
 
 let songIndex = parseInt(localStorage.getItem('musicIndex')) || 0;
@@ -22,9 +20,12 @@ function loadSong(index) {
     document.getElementById('artist-name').innerText = song.artist;
     document.getElementById('artist-img').src = song.img;
     audio.src = song.path;
+    localStorage.setItem('musicIndex', index);
 }
 
-function updateProgress(e) {
+loadSong(songIndex);
+
+audio.addEventListener('timeupdate', (e) => {
     const { duration, currentTime } = e.srcElement;
     const progressPercent = (currentTime / duration) * 100;
     progress.style.width = `${progressPercent}%`;
@@ -34,19 +35,13 @@ function updateProgress(e) {
     if(duration) durationEl.innerText = formatTime(duration);
     
     localStorage.setItem('musicTime', currentTime);
-}
+});
 
-function setProgress(e) {
-    const width = this.clientWidth;
+progressContainer.addEventListener('click', (e) => {
+    const width = progressContainer.clientWidth;
     const clickX = e.offsetX;
-    const duration = audio.duration;
-    audio.currentTime = (clickX / width) * duration;
-}
-
-loadSong(songIndex);
-
-audio.addEventListener('timeupdate', updateProgress);
-progressContainer.addEventListener('click', setProgress);
+    audio.currentTime = (clickX / width) * audio.duration;
+});
 
 playBtn.addEventListener('click', () => {
     if (audio.paused) {
@@ -65,16 +60,29 @@ document.getElementById('next-btn').addEventListener('click', () => {
     loadSong(songIndex);
     audio.play();
     playBtn.innerText = "⏸";
+    localStorage.setItem('musicPlaying', 'true');
 });
 
-window.addEventListener('load', () => {
-    const savedTime = localStorage.getItem('musicTime');
-    const isPlaying = localStorage.getItem('musicPlaying') === 'true';
-    if (savedTime) audio.currentTime = parseFloat(savedTime);
-    if (isPlaying) {
-        audio.play().catch(() => {
-            document.addEventListener('click', () => audio.play(), { once: true });
-        });
-        playBtn.innerText = "⏸";
-    }
+document.getElementById('prev-btn').addEventListener('click', () => {
+    songIndex = (songIndex - 1 + songs.length) % songs.length;
+    loadSong(songIndex);
+    audio.play();
+    playBtn.innerText = "⏸";
+    localStorage.setItem('musicPlaying', 'true');
 });
+
+const resumeAudio = () => {
+    const isPlaying = localStorage.getItem('musicPlaying') === 'true';
+    const savedTime = localStorage.getItem('musicTime');
+
+    if (isPlaying && audio.paused) {
+        if (savedTime) audio.currentTime = parseFloat(savedTime);
+        audio.play().then(() => {
+            playBtn.innerText = "⏸";
+        }).catch(err => console.log("Auto-play blocked"));
+    }
+};
+
+window.addEventListener('load', resumeAudio);
+document.addEventListener('touchstart', resumeAudio, { once: true });
+document.addEventListener('click', resumeAudio, { once: true });
