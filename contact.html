@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Contact | Sameer Abdullah</title>
-    <link rel="stylesheet" href="css/home.css" />
+
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/contact.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
 
   <body>
@@ -15,12 +17,12 @@
       </div>
 
       <ul class="nav-links">
-        <li><a href="index.html#home">Home</a></li>
-        <li><a href="experience.html" >Work Experience</a></li>
+        <li><a href="home.html">Home</a></li>
+        <li><a href="experience.html">Work Experience</a></li>
         <li><a href="skills.html">Skills</a></li>
         <li><a href="projects.html">Projects</a></li>
         <li><a href="about.html">About</a></li>
-        <li><a href="contact.html"class="active" >Contact</a></li>
+        <li><a href="contact.html" class="active">Contact</a></li>
       </ul>
 
       <div class="nav-right">
@@ -30,20 +32,101 @@
       </div>
     </nav>
 
-    <main class="page-wrap">
-      <header class="page-header">
-        <p class="page-kicker">CONTACT</p>
-        <h1 class="page-title">Get in Touch</h1>
-        <p class="page-subtitle">Best ways to reach me.</p>
+    <main class="contact-wrap">
+      <header class="contact-header reveal">
+        <p class="kicker">CONTACT</p>
+        <h1>Let’s Connect</h1>
+        <p class="subtitle">
+          The fastest way to reach me is email. You can also connect on
+          LinkedIn.
+        </p>
       </header>
 
-      <section class="section">
-        <div class="card">
-          <p class="text">Email: sa.sameer.abdullah@gmail.com</p>
-          <p class="text">LinkedIn: linkedin.com/in/yourname</p>
-          <p class="text">GitHub: github.com/yourusername</p>
+      <section class="contact-card reveal delay-1">
+        <div class="row">
+          <span class="label">Email</span>
+          <a class="value" href="mailto:sa.sameer.abdullah@gmail.com">
+            sa.sameer.abdullah@gmail.com
+          </a>
+        </div>
+
+        <div class="row">
+          <span class="label">LinkedIn</span>
+          <a
+            class="value"
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+          >
+            Open profile
+          </a>
+        </div>
+
+        <div class="row">
+          <span class="label">GitHub</span>
+          <a
+            class="value"
+            href="https://github.com/"
+            target="_blank"
+            rel="noopener"
+          >
+            Open GitHub
+          </a>
+        </div>
+
+        <div class="actions">
+          <a
+            class="btn primary"
+            href="mailto:sa.sameer.abdullah@gmail.com?subject=Hello%20Sameer"
+          >
+            Email Me
+          </a>
+          <a
+            class="btn ghost"
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
+          <a
+            class="btn ghost"
+            href="assets/SAMEER ABDULLAH - Resume.pdf"
+            download
+          >
+            Resume
+          </a>
         </div>
       </section>
+      <section class="spacer-section"></section>
     </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Sameer Abdullah</span>
+          <span class="footer-tagline">
+            Computer Science Student · Aspiring Software Engineer
+          </span>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-right">
+          <a href="mailto:sa.sameer.abdullah@gmail.com">Email</a>
+          <a
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="js/reveal.js"></script>
   </body>
 </html>

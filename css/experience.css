@@ -15,31 +15,23 @@
 }
 
 body {
-  background: radial-gradient(
-      900px 520px at 18% -10%,
-      rgba(229, 9, 20, 0.18),
-      transparent 60%
-    ),
-    radial-gradient(
-      700px 420px at 90% 0%,
-      rgba(255, 255, 255, 0.05),
-      transparent 55%
-    ),
+  background:
+    radial-gradient(900px 520px at 18% -10%, rgba(229, 9, 20, 0.18), transparent 60%),
+    radial-gradient(700px 420px at 90% 0%, rgba(255, 255, 255, 0.05), transparent 55%),
     linear-gradient(180deg, var(--bg), var(--bg2));
   color: var(--text);
-  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial,
-    sans-serif;
+  font-family: ui-sans-serif, system-ui, -apple-system, Segoe UI, Roboto, Arial, sans-serif;
 }
 
 .page-wrap {
   max-width: 1100px;
   margin: 0 auto;
-  padding: 110px 22px 70px; 
+  padding: 110px 22px 70px;
 }
 
 .page-header {
   position: relative;
-  padding: 26px 0 26px;
+  padding: 26px 0;
   margin-bottom: 18px;
 }
 
@@ -50,34 +42,26 @@ body {
   right: -18px;
   top: -18px;
   height: 180px;
-  background: radial-gradient(
-      600px 220px at 20% 20%,
-      rgba(229, 9, 20, 0.20),
-      transparent 60%
-    ),
+  background:
+    radial-gradient(600px 220px at 20% 20%, rgba(229, 9, 20, 0.20), transparent 60%),
     linear-gradient(180deg, rgba(0, 0, 0, 0.55), transparent);
-  pointer-events: none;
   border-radius: 18px;
+  pointer-events: none;
 }
 
 .page-kicker {
-  position: relative;
   color: rgba(255, 255, 255, 0.68);
   letter-spacing: 0.28em;
   font-weight: 900;
   font-size: 0.78rem;
-  text-transform: uppercase;
 }
 
 .page-title {
-  position: relative;
   margin-top: 10px;
   font-size: clamp(2.15rem, 4vw, 3.15rem);
-  letter-spacing: -0.03em;
-  line-height: 1.04;
   font-weight: 750;
+  letter-spacing: -0.03em;
 }
-
 
 .page-title::after {
   content: "";
@@ -87,26 +71,21 @@ body {
   margin-top: 12px;
   border-radius: 999px;
   background: linear-gradient(90deg, var(--accent), rgba(229, 9, 20, 0.25));
-  box-shadow: 0 10px 25px rgba(229, 9, 20, 0.15);
 }
 
 .page-subtitle {
-  position: relative;
   margin-top: 12px;
   max-width: 70ch;
   color: var(--muted);
   font-size: 1.05rem;
   line-height: 1.45;
-  font-weight: 550;
 }
-
 
 .timeline {
   position: relative;
   margin-top: 26px;
   padding: 10px 0 30px;
 }
-
 
 .timeline::before {
   content: "";
@@ -123,10 +102,8 @@ body {
   display: grid;
   grid-template-columns: 1fr 150px 1fr;
   gap: 22px;
-  align-items: start;
   margin: 34px 0;
 }
-
 
 .t-mid {
   display: grid;
@@ -157,12 +134,12 @@ body {
 
 .t-card {
   border-radius: 16px;
-  padding: 22px 22px 20px;
+  padding: 22px;
   border: 1px solid var(--border);
   box-shadow: var(--shadow);
-  text-align: left;
   position: relative;
   overflow: hidden;
+  transition: transform 0.2s ease, border-color 0.2s ease;
 }
 
 .t-card::before {
@@ -174,46 +151,36 @@ body {
     rgba(255, 255, 255, 0.08),
     transparent 60%
   );
-  opacity: 0.8;
 }
 
 .t-card.red {
   background: linear-gradient(180deg, var(--accent-deep), rgba(150, 0, 8, 0.92));
   color: #fff;
-  border-color: rgba(255, 255, 255, 0.14);
 }
 
 .t-card.light {
   background: rgba(255, 255, 255, 0.94);
   color: #111;
-  border-color: rgba(0, 0, 0, 0.08);
   box-shadow: var(--shadow-soft);
 }
 
 .t-card h3 {
-  position: relative;
   font-size: 1.08rem;
   font-weight: 750;
-  line-height: 1.25;
 }
 
 .t-card .company {
-  position: relative;
   margin-top: 6px;
   font-weight: 650;
-  opacity: 0.95;
 }
 
 .t-card .stack {
-  position: relative;
   margin-top: 10px;
   font-size: 0.93rem;
   font-weight: 600;
-  opacity: 0.92;
 }
 
 .t-card ul {
-  position: relative;
   margin-top: 14px;
   padding-left: 18px;
 }
@@ -224,18 +191,13 @@ body {
   font-weight: 350;
 }
 
-.t-card li::marker {
-  color: rgba(255, 255, 255, 0.9);
-}
-
 .t-card.light li::marker {
   color: var(--accent);
 }
 
 .t-card:hover {
   transform: translateY(-3px);
-  transition: transform 0.18s ease, border-color 0.18s ease;
-  border-color: rgba(229, 9, 20, 0.28);
+  border-color: rgba(229, 9, 20, 0.35);
 }
 
 @media (max-width: 900px) {
@@ -247,6 +209,7 @@ body {
   .t-item {
     grid-template-columns: 60px 1fr;
     gap: 14px;
+    align-items: start;
   }
 
   .t-empty {
@@ -254,7 +217,14 @@ body {
   }
 
   .t-mid {
+    grid-column: 1;
     justify-items: start;
+  }
+
+  .t-card {
+    grid-column: 2;
+    width: 100%;
+    max-width: 100%;
   }
 
   .date {
@@ -265,4 +235,3 @@ body {
     padding-top: 105px;
   }
 }
-

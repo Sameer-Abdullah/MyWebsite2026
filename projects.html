@@ -7,10 +7,10 @@
 
     <link rel="stylesheet" href="css/navbar.css" />
     <link rel="stylesheet" href="css/projects.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
 
   <body>
-    <!-- NAVBAR (keep your exact navbar, just set Projects active) -->
     <nav class="navbar">
       <div class="nav-left">
         <span class="logo">SAMEER ABDULLAH</span>
@@ -33,90 +33,202 @@
     </nav>
 
     <main class="wrap">
-      <!-- TOP CTA -->
-      <section class="cta">
-        <div class="cta-left">
-          <h1>Live Builds & Experiments</h1>
-          <p>
-            More shipping logs, hackathon artifacts, and experiments live on my GitHub.
-          </p>
-        </div>
-
-        <a class="cta-btn" href="https://github.com/" target="_blank" rel="noopener">
-          <span class="gh-dot" aria-hidden="true"></span>
-          Explore GitHub
-        </a>
-      </section>
-
-      <!-- SECTION TITLE -->
-      <header class="section-head">
-        <h2>Spotlight Builds</h2>
-      </header>
-
-      <!-- PROJECT GRID -->
-      <section class="grid">
-        <!-- CARD 1 -->
+      <section class="grid" aria-label="Spotlight Builds">
+        <!-- 1 -->
         <article class="card">
           <div class="thumb">
-            <img src="images/project-1.jpg" alt="Project screenshot" />
-            <span class="badge">UPDATED • 9/23/2025</span>
+            <img
+              src="images/projects/netflix.jpg"
+              alt="Personal Portfolio Website preview"
+            />
+            <span class="updated">PERSONAL</span>
           </div>
-
           <div class="card-body">
             <div class="card-title-row">
-              <h3>Project Name One</h3>
-              <span class="stars">★ 0</span>
+              <h3>MyWebsite Portfolio (Netflix-style)</h3>
             </div>
-
             <p class="desc">
-              Short, real description. What it does + what you built (1–2 lines max).
+              My personal portfolio built with a Netflix-like look: clean
+              sections, smooth UI, and recruiter-friendly layout.
             </p>
-
             <div class="tags">
-              <span class="tag">Python</span>
-              <span class="tag">FastAPI</span>
-              <span class="tag">MySQL</span>
+              <span class="tag">HTML</span>
+              <span class="tag">CSS</span>
+              <span class="tag">JavaScript</span>
             </div>
-
             <div class="actions">
-              <a class="btn" href="https://github.com/" target="_blank" rel="noopener">
-                GitHub
-              </a>
+              <a
+                class="btn"
+                href="https://github.com/Sameer-Abdullah/MyWebsite2026"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
             </div>
           </div>
         </article>
 
-        <!-- CARD 2 -->
+        <!-- 2 -->
         <article class="card">
           <div class="thumb">
-            <img src="images/project-2.jpg" alt="Project screenshot" />
+            <img
+              src="images/projects/minesweeper.jpg"
+              alt="Minesweeper game preview"
+            />
+            <span class="updated">GAME</span>
           </div>
-
           <div class="card-body">
             <div class="card-title-row">
-              <h3>Project Name Two</h3>
-              <span class="stars">★ 0</span>
+              <h3>Minesweeper Game</h3>
             </div>
-
             <p class="desc">
-              Another clean description. Keep it human. No buzzwords, no “innovative”.
+              A Minesweeper build with grid logic, bomb placement, reveals,
+              flags, and win/lose conditions.
             </p>
-
             <div class="tags">
-              <span class="tag">React</span>
-              <span class="tag">JavaScript</span>
-              <span class="tag">SQL</span>
+              <span class="tag">Python</span>
+              <span class="tag">Game Logic</span>
+              <span class="tag">UI</span>
             </div>
-
             <div class="actions">
-              <a class="btn" href="https://github.com/" target="_blank" rel="noopener">
-                GitHub
-              </a>
+              <a
+                class="btn"
+                href="https://github.com/Sameer-Abdullah/Minesweeper"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- 3 -->
+        <article class="card">
+          <div class="thumb">
+            <img
+              src="images/projects/blackjack.jpg"
+              alt="Blackjack game preview"
+            />
+            <span class="updated">GAME</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Blackjack Game</h3>
+            </div>
+            <p class="desc">
+              Console Blackjack with deck handling, scoring rules, hit/stand
+              flow, and win/loss logic.
+            </p>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">OOP</span>
+              <span class="tag">Logic</span>
+            </div>
+            <div class="actions">
+              <a
+                class="btn"
+                href="https://github.com/Sameer-Abdullah/BlackJack-Game"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- 4 -->
+        <article class="card">
+          <div class="thumb">
+            <img
+              src="images/projects/flightreservation.jpg"
+              alt="Flight Reservation System preview"
+            />
+            <span class="updated">COURSE</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Flight Reservation System</h3>
+            </div>
+            <p class="desc">
+              Team-based reservation system using sprint planning, Git workflow,
+              and structured feature delivery.
+            </p>
+            <div class="tags">
+              <span class="tag">Software Eng</span>
+              <span class="tag">Git/GitHub</span>
+              <span class="tag">Team</span>
+            </div>
+            <div class="actions">
+              <a
+                class="btn"
+                href="https://github.com/Sameer-Abdullah/flight-reservation-system-group40"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
+            </div>
+          </div>
+        </article>
+
+        <!-- 5 -->
+        <article class="card">
+          <div class="thumb">
+            <img
+              src="images/projects/gradecal.jpg"
+              alt="Grade calculator preview"
+            />
+            <span class="updated">UTILITY</span>
+          </div>
+          <div class="card-body">
+            <div class="card-title-row">
+              <h3>Grade Calculator</h3>
+            </div>
+            <p class="desc">
+              Weighted grade calculator to compute final marks quickly and
+              accurately.
+            </p>
+            <div class="tags">
+              <span class="tag">Java</span>
+              <span class="tag">Logic</span>
+              <span class="tag">Input</span>
+            </div>
+            <div class="actions">
+              <a
+                class="btn"
+                href="https://github.com/Sameer-Abdullah/Grade-Calculator"
+                target="_blank"
+                rel="noopener"
+                >GitHub</a
+              >
             </div>
           </div>
         </article>
       </section>
     </main>
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Sameer Abdullah</span>
+          <span class="footer-tagline">
+            Computer Science Student · Aspiring Software Engineer
+          </span>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-right">
+          <a href="mailto:sa.sameer.abdullah@gmail.com">Email</a>
+          <a
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
   </body>
 </html>
-

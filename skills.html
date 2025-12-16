@@ -6,6 +6,7 @@
     <title>Skills | Sameer Abdullah</title>
     <link rel="stylesheet" href="css/skills.css" />
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
 
   <body>
@@ -192,14 +193,36 @@
           </div>
         </div>
       </section>
-
-      <footer class="footer">
-        <p>© <span id="year"></span> Sameer Abdullah</p>
-      </footer>
     </main>
 
     <script>
       document.getElementById("year").textContent = new Date().getFullYear();
     </script>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Sameer Abdullah</span>
+          <span class="footer-tagline">
+            Computer Science Student · Aspiring Software Engineer
+          </span>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-right">
+          <a href="mailto:sa.sameer.abdullah@gmail.com">Email</a>
+          <a
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
   </body>
 </html>

@@ -4,8 +4,10 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>About | Sameer Abdullah</title>
-    <link rel="stylesheet" href="css/home.css" />
+
     <link rel="stylesheet" href="css/navbar.css" />
+    <link rel="stylesheet" href="css/about.css" />
+    <link rel="stylesheet" href="css/footer.css" />
   </head>
 
   <body>
@@ -30,21 +32,86 @@
       </div>
     </nav>
 
-    <main class="page-wrap">
-      <header class="page-header">
-        <p class="page-kicker">ABOUT</p>
-        <h1 class="page-title">About Me</h1>
-        <p class="page-subtitle">
-          A bit about who I am and what I’m working toward.
-        </p>
-      </header>
+    <main class="about-wrap">
+      <section class="about-hero reveal">
+        <div class="photo-glow"></div>
+        <img src="images/me/me.jpg" alt="Sameer Abdullah" class="about-photo" />
+      </section>
 
-      <section class="section">
-        <p class="text">
-          I’m a Computer Science student with a strong interest in software
-          engineering, data structures, and building real-world applications.
+      <section class="about-content">
+        <h1 class="reveal delay-1">Sameer Abdullah</h1>
+        <p class="subtitle reveal delay-2">
+          Computer Science Student · Aspiring Software Engineer
         </p>
+
+        <p class="about-text reveal delay-3">
+          I’m a Computer Science student with a strong interest in software
+          engineering and building practical, real-world applications. I’m
+          currently studying Computer Science at Wilfrid Laurier University,
+          where I’ve focused on core topics like data structures, algorithms,
+          databases, and software design.
+        </p>
+
+        <p class="about-text reveal delay-4">
+          Through my coursework and personal projects, I’ve worked with
+          languages such as Java, C, Python, and JavaScript, and I’ve built
+          applications using HTML, CSS, SQL, and Git/GitHub. I’ve taken courses
+          in data structures, database systems, digital electronics, and applied
+          cryptography.
+        </p>
+
+        <p class="about-text reveal delay-5">
+          My goal is to grow into a software engineer who designs clean systems,
+          writes reliable code, and builds software that scales.
+        </p>
+
+        <div class="about-actions reveal delay-6">
+          <a
+            class="btn ghost"
+            href="assets/SAMEER ABDULLAH - Resume.pdf"
+            download
+          >
+            Download Resume
+          </a>
+          <a class="btn ghost" href="contact.html">Hire Me</a>
+          <a
+            class="btn ghost"
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+          >
+            LinkedIn
+          </a>
+        </div>
       </section>
     </main>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Sameer Abdullah</span>
+          <span class="footer-tagline">
+            Computer Science Student · Aspiring Software Engineer
+          </span>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-right">
+          <a href="mailto:sa.sameer.abdullah@gmail.com">Email</a>
+          <a
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+      
+    </footer>
+    <script src="js/reveal.js"></script>
   </body>
 </html>
