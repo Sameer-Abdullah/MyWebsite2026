@@ -1,10 +1,11 @@
 const songs = [
-    { name: "CN Tower", artist: "Drake", path: "audio/cn-tower-drake.mp3", img: "images/artists/cn-tower.jpg" },
-    { name: "Hotline Bling", artist: "Drake", path: "audio/hotline-drake.mp3", img: "images/artists/hotline.jpg" },
-    { name: "Laugh Now", artist: "Drake", path: "audio/laughnow-crylater-drake.mp3", img: "images/artists/laughnow.jpg" },
-    { name: "Nokia", artist: "Drake", path: "audio/nokia-drake.mp3", img: "images/artists/nokia.jpg" },
-    { name: "Passionfruit", artist: "Drake", path: "audio/passionfruit-drake.mp3", img: "images/artists/passionfruit.jpg" },
+  { name: "CN Tower", artist: "Drake", path: "/audio/cn-tower-drake.mp3", img: "/images/artists/cn-tower.jpg" },
+  { name: "Hotline Bling", artist: "Drake", path: "/audio/hotline-drake.mp3", img: "/images/artists/hotline.jpg" },
+  { name: "Laugh Now", artist: "Drake", path: "/audio/laughnow-crylater-drake.mp3", img: "/images/artists/laughnow.jpg" },
+  { name: "Nokia", artist: "Drake", path: "/audio/nokia-drake.mp3", img: "/images/artists/nokia.jpg" },
+  { name: "Passionfruit", artist: "Drake", path: "/audio/passionfruit-drake.mp3", img: "/images/artists/passionfruit.jpg" },
 ];
+
 
 let songIndex = parseInt(localStorage.getItem('musicIndex')) || 0;
 const audio = document.getElementById('bg-music');

@@ -143,6 +143,9 @@ main {
 .pick-awards { background-image: url('../images/picks/awards.jpg'); }
 .pick-proj { background-image: url('../images/picks/projects.jpg'); }
 .pick-contact { background-image: url('../images/picks/contact.jpg'); }
+.pick-oop {background-image: url('../images/topics/oop.jpg');}
+.pick-dsa {background-image: url('../images/topics/datastructures.jpg');}
+
 
 
 .pick-card::after {

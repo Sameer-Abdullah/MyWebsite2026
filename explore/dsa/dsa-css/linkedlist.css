@@ -1,0 +1,385 @@
+
+body {
+  background-color: #0a0a0a;
+  color: #e0e0e0;
+}
+
+.learn-container {
+  max-width: 1100px;
+  margin: 120px auto 60px;
+  padding: 0 20px;
+}
+
+
+.theory-section h1 {
+  color: #a29bfe;
+  font-size: 2.5rem;
+  margin-bottom: 20px;
+}
+
+.theory-section p {
+  color: #b2bec3;
+  font-size: 1.1rem;
+}
+
+
+.complexity-table table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 25px;
+  background: #161616;
+  border: 1px solid #333;
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.complexity-table th {
+  background: #1e1e1e;
+  color: #00cec9;
+  padding: 15px;
+  text-transform: uppercase;
+  font-size: 0.85rem;
+}
+
+.complexity-table td {
+  padding: 15px;
+  border-top: 1px solid #333;
+  color: #fab1a0;
+}
+
+
+.visualizer-section {
+  background: #111111;
+  border: 1px solid #333;
+  border-radius: 20px;
+  padding: 40px;
+  margin-top: 40px;
+  box-shadow: 0 20px 50px rgba(0, 0, 0, 0.5);
+}
+
+.visualizer-section h2 {
+  margin-bottom: 18px;
+}
+
+
+.meta-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 18px;
+}
+
+.meta-pill {
+  background: rgba(0, 206, 201, 0.1);
+  border: 1px solid rgba(0, 206, 201, 0.25);
+  color: #00cec9;
+  padding: 8px 12px;
+  border-radius: 999px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.95rem;
+}
+
+
+.list-stage {
+  position: relative;
+  margin-bottom: 24px;
+}
+
+.label-pill {
+  position: absolute;
+  top: -12px;
+  font-size: 0.75rem;
+  font-weight: 800;
+  letter-spacing: 0.08em;
+  padding: 6px 10px;
+  border-radius: 999px;
+  background: #1e1e1e;
+  border: 1px solid #333;
+  color: #b2bec3;
+}
+
+.head-pill {
+  left: 10px;
+}
+
+.tail-pill {
+  right: 10px;
+}
+
+
+.list-wrapper {
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+  gap: 12px;
+  padding: 18px;
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  border: 1px dashed #444;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.list-wrapper::-webkit-scrollbar {
+  height: 0px;
+}
+.list-wrapper {
+  scrollbar-width: none;
+}
+
+.ll-block {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  flex: 0 0 auto;
+}
+
+.ll-node {
+  width: 170px;
+  border-radius: 14px;
+  padding: 12px 12px 10px;
+  background: linear-gradient(135deg, #6c5ce7, #a29bfe);
+  box-shadow: 0 10px 25px rgba(108, 92, 231, 0.35);
+  position: relative;
+  animation: popIn 0.35s cubic-bezier(0.175, 0.885, 0.32, 1.275);
+}
+
+.ll-node.is-head {
+  outline: 2px solid rgba(0, 206, 201, 0.7);
+  outline-offset: 3px;
+}
+
+.ll-node.is-tail {
+  outline: 2px solid rgba(255, 118, 117, 0.7);
+  outline-offset: 3px;
+}
+
+.ll-node.is-highlight {
+  transform: translateY(-2px) scale(1.02);
+  box-shadow: 0 18px 40px rgba(0, 206, 201, 0.25);
+}
+
+.node-top {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.node-val {
+  font-size: 1.35rem;
+  font-weight: 900;
+  color: #fff;
+}
+
+.node-id {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.85);
+}
+
+.node-bottom {
+  margin-top: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: rgba(0, 0, 0, 0.18);
+  padding: 8px 10px;
+  border-radius: 10px;
+}
+
+.node-label {
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.node-next {
+  font-weight: 900;
+  color: #fff;
+}
+
+.node-index {
+  position: absolute;
+  top: 8px;
+  left: 10px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.75rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.ll-arrow {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  opacity: 0.95;
+}
+
+.arrow-line {
+  width: 22px;
+  height: 3px;
+  border-radius: 999px;
+  background: rgba(0, 206, 201, 0.9);
+  box-shadow: 0 0 18px rgba(0, 206, 201, 0.25);
+}
+
+.arrow-head {
+  color: rgba(0, 206, 201, 0.9);
+  font-size: 0.95rem;
+  transform: translateY(-1px);
+}
+
+.ll-end {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 70px;
+}
+
+.null-tag {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.14);
+  padding: 6px 10px;
+  border-radius: 999px;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 0.9rem;
+  color: #b2bec3;
+}
+
+.empty-state {
+  color: #b2bec3;
+  font-family: "Courier New", Courier, monospace;
+  font-size: 1rem;
+}
+
+
+.control-panel {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16px;
+}
+
+.inputs-row {
+  display: flex;
+  gap: 10px;
+  flex-wrap: wrap;
+  justify-content: center;
+  width: 100%;
+}
+
+#value-input,
+#index-input {
+  background: #1e1e1e;
+  border: 2px solid #333;
+  border-radius: 8px;
+  padding: 12px 14px;
+  color: white;
+  font-size: 1rem;
+  outline: none;
+  transition: border-color 0.3s;
+}
+
+#value-input:focus,
+#index-input:focus {
+  border-color: #00cec9;
+}
+
+.button-group {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 10px;
+}
+
+button {
+  padding: 12px 10px;
+  border-radius: 8px;
+  font-weight: 800;
+  cursor: pointer;
+  border: none;
+  transition: transform 0.15s ease, filter 0.2s;
+}
+
+button:active {
+  transform: scale(0.96);
+}
+
+.btn-primary {
+  background: #00cec9;
+  color: #000;
+}
+.btn-primary:hover {
+  filter: brightness(1.2);
+}
+
+.btn-danger {
+  background: transparent;
+  border: 1px solid #ff7675;
+  color: #ff7675;
+}
+.btn-danger:hover {
+  background: #ff7675;
+  color: white;
+}
+
+
+.feedback-msg {
+  color: #00cec9;
+  font-family: "Courier New", Courier, monospace;
+  background: rgba(0, 206, 201, 0.1);
+  padding: 10px 14px;
+  border-radius: 6px;
+  margin-top: 18px;
+  text-align: center;
+}
+
+
+@keyframes popIn {
+  0% {
+    opacity: 0;
+    transform: scale(0.6) translateY(14px);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1) translateY(0);
+  }
+}
+
+
+@media (max-width: 600px) {
+  .learn-container {
+    margin: 90px auto 40px;
+    padding: 0 14px;
+  }
+
+  .theory-section h1 {
+    font-size: 2rem;
+  }
+
+  .complexity-table {
+    overflow-x: auto;
+  }
+  .complexity-table table {
+    min-width: 520px;
+  }
+
+  .visualizer-section {
+    padding: 16px;
+    border-radius: 16px;
+  }
+
+  .ll-node {
+    width: 150px;
+  }
+
+  .button-group {
+    grid-template-columns: 1fr 1fr; 
+  }
+
+  #value-input,
+  #index-input {
+    width: 100%;
+    max-width: 380px;
+  }
+}

@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Learn DSA - Arrays</title>
+
+    <link rel="stylesheet" href="../../css/navbar.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="../../css/musicplayer.css" />
+
+    <link rel="stylesheet" href="dsa-css/array.css" />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="home.html"><span class="logo">SAMEER ABDULLAH</span></a>
+      </div>
+      <button
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+      <ul class="nav-links" id="navLinks">
+        <li><a href="/home.html">Home</a></li>
+        <li><a href="/experience.html">Work Experience</a></li>
+        <li><a href="/skills.html">Skills</a></li>
+        <li><a href="/projects.html">Projects</a></li>
+        <li><a href="/about.html">About</a></li>
+        <li><a href="/contact.html">Contact</a></li>
+      </ul>
+      <div class="nav-right">
+        <a href="select.html"
+          ><img src="/images/recuriter.jpg" alt="Profile"
+        /></a>
+      </div>
+    </nav>
+
+    <main class="learn-container">
+      <section class="theory-section">
+        <h1>Arrays</h1>
+        <p>
+          An array is a linear data structure that collects elements of the same
+          type and stores them in <strong>contiguous memory locations</strong>.
+        </p>
+
+        <div class="complexity-table">
+          <table>
+            <tr>
+              <th>Operation</th>
+              <th>Time Complexity</th>
+            </tr>
+            <tr>
+              <td>Access (by index)</td>
+              <td>$O(1)$</td>
+            </tr>
+            <tr>
+              <td>Search (linear)</td>
+              <td>$O(n)$</td>
+            </tr>
+            <tr>
+              <td>Insertion/Deletion</td>
+              <td>$O(n)$</td>
+            </tr>
+          </table>
+        </div>
+      </section>
+
+      <section class="visualizer-section">
+        <h2>Interactive Visualizer</h2>
+        <div id="array-wrapper" class="array-wrapper"></div>
+
+        <div class="control-panel">
+          <input
+            type="text"
+            id="value-input"
+            placeholder="Value"
+            maxlength="4"
+          />
+          <div class="button-group">
+            <button class="btn-primary" id="push-btn">Push (End)</button>
+            <button class="btn-primary" id="unshift-btn">
+              Unshift (Front)
+            </button>
+            <button class="btn-danger" id="pop-btn">Pop</button>
+            <button class="btn-danger" id="shift-btn">Shift</button>
+          </div>
+        </div>
+        <p id="feedback-msg" class="feedback-msg">Enter a value to start!</p>
+      </section>
+    </main>
+
+    <div class="music-player">
+      <div class="player-main">
+        <div class="artist-container">
+          <img
+            src="../../images/artists/cn-tower.jpg"
+            alt="Artist"
+            class="artist-thumb"
+            id="artist-img"
+          />
+        </div>
+        <div class="player-info">
+          <div class="player-details">
+            <span id="track-name">Loading...</span>
+            <span id="artist-name">Drake</span>
+          </div>
+          <div class="progress-wrapper">
+            <span id="current-time">0:00</span>
+            <div class="progress-container" id="progress-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+      </div>
+      <div class="controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+      <audio id="bg-music"></audio>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Sameer Abdullah</span>
+          <span class="footer-tagline"
+            >Computer Science Student · Aspiring Software Engineer</span
+          >
+        </div>
+        <div class="footer-divider"></div>
+        <div class="footer-right">
+          <a href="mailto:sa.sameer.abdullah@gmail.com">Email</a>
+          <a href="https://www.linkedin.com/..." target="_blank" rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/navbar.js"></script>
+    <script src="../../js/musicplayer.js"></script>
+    <script src="dsa-js/array.js"></script>
+  </body>
+</html>

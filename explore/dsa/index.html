@@ -1,0 +1,373 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>DSA Roadmap | Sameer Abdullah</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link rel="stylesheet" href="../../css/navbar.css" />
+    <link rel="stylesheet" href="../../css/footer.css" />
+    <link rel="stylesheet" href="/css/musicplayer.css" />
+    <link rel="stylesheet" href="/explore/dsa/dsa-css/index.css" />
+    <link rel="icon" type="image/jpg" href="../../images/me/me.jpg" />
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="nav-left">
+        <a href="../../home.html">
+          <span class="logo">SAMEER ABDULLAH</span>
+        </a>
+      </div>
+
+      <button
+        class="nav-toggle"
+        aria-label="Open menu"
+        aria-expanded="false"
+        aria-controls="navLinks"
+      >
+        ☰
+      </button>
+
+      <ul class="nav-links" id="navLinks">
+        <li><a href="../../home.html">Home</a></li>
+        <li><a href="../../experience.html">Work Experience</a></li>
+        <li><a href="../../skills.html">Skills</a></li>
+        <li><a href="../../projects.html">Projects</a></li>
+        <li><a href="../../about.html">About</a></li>
+        <li><a href="../../contact.html">Contact</a></li>
+      </ul>
+
+      <div class="nav-right">
+        <a href="../../select.html">
+          <img src="../../images/recuriter.jpg" alt="Profile" />
+        </a>
+      </div>
+    </nav>
+
+    <main class="page">
+      <header class="top">
+        <div class="top-left">
+          <h1>DSA Roadmap</h1>
+          <p>Click a node to learn it. Mobile switches to a clean step path.</p>
+        </div>
+
+        <div class="top-right">
+          <a class="top-btn" href="../../home.html">← Back Home</a>
+        </div>
+      </header>
+
+      <section class="road-wrap">
+        <div class="legend">
+          <span class="dot ds"></span><span>Data Structure</span>
+          <span class="dot alg"></span><span>Algorithm</span>
+        </div>
+
+        <div class="road" id="road">
+          <svg
+            class="road-svg"
+            viewBox="0 0 1200 900"
+            preserveAspectRatio="none"
+          >
+            <path
+              class="road-edge"
+              d="M110 115 C 360 30, 560 125, 700 175
+                 C 930 255, 870 430, 650 470
+                 C 420 515, 350 640, 545 720
+                 C 760 810, 1010 745, 1090 845"
+            />
+            <path
+              class="road-edge2"
+              d="M110 115 C 360 30, 560 125, 700 175
+                 C 930 255, 870 430, 650 470
+                 C 420 515, 350 640, 545 720
+                 C 760 810, 1010 745, 1090 845"
+            />
+            <path
+              class="road-core"
+              d="M110 115 C 360 30, 560 125, 700 175
+                 C 930 255, 870 430, 650 470
+                 C 420 515, 350 640, 545 720
+                 C 760 810, 1010 745, 1090 845"
+            />
+            <path
+              class="road-dash"
+              d="M110 115 C 360 30, 560 125, 700 175
+                 C 930 255, 870 430, 650 470
+                 C 420 515, 350 640, 545 720
+                 C 760 810, 1010 745, 1090 845"
+            />
+          </svg>
+
+          <button class="node ds" data-id="arrays" data-x="140" data-y="100">
+            <span class="node-core"></span>
+            <span class="node-label">Arrays</span>
+          </button>
+
+          <button class="node ds" data-id="linkedList" data-x="400" data-y="90">
+            <span class="node-core"></span>
+            <span class="node-label">Linked List</span>
+          </button>
+
+          <button class="node ds" data-id="stacks" data-x="680" data-y="140">
+            <span class="node-core"></span>
+            <span class="node-label">Stacks</span>
+          </button>
+
+          <button class="node ds" data-id="queues" data-x="830" data-y="290">
+            <span class="node-core"></span>
+            <span class="node-label">Queues</span>
+          </button>
+
+          <button class="node ds" data-id="trees" data-x="550" data-y="380">
+            <span class="node-core"></span>
+            <span class="node-label">Trees</span>
+          </button>
+
+          <button class="node ds" data-id="graphs" data-x="570" data-y="545">
+            <span class="node-core"></span>
+            <span class="node-label">Graphs</span>
+          </button>
+
+          <button
+            class="node ds"
+            data-id="hashTables"
+            data-x="800"
+            data-y="580"
+          >
+            <span class="node-core"></span>
+            <span class="node-label">Hash Tables</span>
+          </button>
+
+          <button class="node alg" data-id="sorting" data-x="1100" data-y="630">
+            <span class="node-core"></span>
+            <span class="node-label">Sorting</span>
+          </button>
+        </div>
+
+        <aside class="panel" id="panel" aria-live="polite">
+          <div class="panel-top">
+            <div class="panel-kicker" id="panelKicker">Pick a topic</div>
+            <div class="panel-title" id="panelTitle">DSA Roadmap</div>
+          </div>
+
+          <div class="panel-body">
+            <div class="panel-row">
+              <div class="panel-label">What it is</div>
+              <div class="panel-text" id="panelWhat">
+                Tap a node (or a mobile step) to see details.
+              </div>
+            </div>
+
+            <div class="panel-row">
+              <div class="panel-label">Why it matters</div>
+              <div class="panel-text" id="panelWhy"></div>
+            </div>
+
+            <div class="panel-row">
+              <div class="panel-label">Next</div>
+              <div class="panel-chips" id="panelNext"></div>
+            </div>
+          </div>
+
+          <div class="panel-actions">
+            <a class="panel-btn" id="panelGo" href="#" aria-disabled="true"
+              >Open Topic</a
+            >
+            <button class="panel-btn ghost" id="panelClose" type="button">
+              Close
+            </button>
+          </div>
+        </aside>
+      </section>
+
+      <section class="mobile-wrap" aria-label="Mobile DSA Path">
+        <div class="mobile-head">
+          <h2>DSA Path</h2>
+          <p>Tap a step.</p>
+        </div>
+
+        <div class="stepper">
+          <button class="step ds" data-id="arrays">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Arrays</span>
+              <span class="step-sub">Fast access, base structure</span>
+            </span>
+          </button>
+
+          <button class="step ds" data-id="linkedList">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Linked List</span>
+              <span class="step-sub">Nodes + pointers</span>
+            </span>
+          </button>
+
+          <button class="step ds" data-id="stacks">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Stacks</span>
+              <span class="step-sub">LIFO, recursion vibe</span>
+            </span>
+          </button>
+
+          <button class="step ds" data-id="queues">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Queues</span>
+              <span class="step-sub">FIFO, scheduling + BFS</span>
+            </span>
+          </button>
+
+          <button class="step ds" data-id="trees">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Trees</span>
+              <span class="step-sub">Hierarchy + recursion</span>
+            </span>
+          </button>
+
+          <button class="step ds" data-id="graphs">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Graphs</span>
+              <span class="step-sub">Networks, BFS/DFS</span>
+            </span>
+          </button>
+
+          <button class="step ds" data-id="hashTables">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Hash Tables</span>
+              <span class="step-sub">Key → value lookup</span>
+            </span>
+          </button>
+
+          <button class="step alg" data-id="sorting">
+            <span class="step-dot"></span>
+            <span class="step-main">
+              <span class="step-title">Sorting</span>
+              <span class="step-sub">From simple → advanced</span>
+            </span>
+          </button>
+        </div>
+      </section>
+
+      <section class="sort-wrap" id="sortingMini">
+        <div class="sort-head">
+          <h2>Sorting Algorithms</h2>
+          <p>A straight road down.</p>
+        </div>
+
+        <div class="sort-road">
+          <div class="sort-line"></div>
+
+          <a class="sort-node" href="sorting/bubble.html">
+            <span class="sort-dot"></span>
+            <div>
+              <span class="sort-name">Bubble Sort</span>
+              <span class="sort-sub">Simple, slow, intuitive</span>
+            </div>
+          </a>
+
+          <a class="sort-node" href="sorting/selection.html">
+            <span class="sort-dot"></span>
+            <div>
+              <span class="sort-name">Selection Sort</span>
+              <span class="sort-sub">Min each pass</span>
+            </div>
+          </a>
+
+          <a class="sort-node" href="sorting/insertion.html">
+            <span class="sort-dot"></span>
+            <div>
+              <span class="sort-name">Insertion Sort</span>
+              <span class="sort-sub">Build sorted prefix</span>
+            </div>
+          </a>
+
+          <a class="sort-node" href="sorting/merge.html">
+            <span class="sort-dot"></span>
+            <div>
+              <span class="sort-name">Merge Sort</span>
+              <span class="sort-sub">Divide and conquer</span>
+            </div>
+          </a>
+
+          <a class="sort-node" href="sorting/quick.html">
+            <span class="sort-dot"></span>
+            <div>
+              <span class="sort-name">Quick Sort</span>
+              <span class="sort-sub">Fast average case</span>
+            </div>
+          </a>
+        </div>
+      </section>
+    </main>
+
+    <div class="music-player">
+      <div class="player-main">
+        <div class="artist-container">
+          <img
+            src="images/artists/cn-tower.jpg"
+            alt="Artist"
+            class="artist-thumb"
+            id="artist-img"
+          />
+        </div>
+        <div class="player-info">
+          <div class="player-details">
+            <span id="track-name">Loading...</span>
+            <span id="artist-name">Drake</span>
+          </div>
+          <div class="progress-wrapper">
+            <span id="current-time">0:00</span>
+            <div class="progress-container" id="progress-container">
+              <div class="progress-bar" id="progress-bar"></div>
+            </div>
+            <span id="duration">0:00</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="controls">
+        <button id="prev-btn">⏮</button>
+        <button id="play-btn">▶</button>
+        <button id="next-btn">⏭</button>
+      </div>
+
+      <audio id="bg-music"></audio>
+    </div>
+
+    <footer class="footer">
+      <div class="footer-inner">
+        <div class="footer-left">
+          <span class="footer-name">Sameer Abdullah</span>
+          <span class="footer-tagline">
+            Computer Science Student · Aspiring Software Engineer
+          </span>
+        </div>
+
+        <div class="footer-divider"></div>
+
+        <div class="footer-right">
+          <a href="mailto:sa.sameer.abdullah@gmail.com">Email</a>
+          <a
+            href="https://www.linkedin.com/in/sameer-abdullah-97789a29b/?originalSubdomain=ca"
+            target="_blank"
+            rel="noopener"
+            >LinkedIn</a
+          >
+          <a href="https://github.com/" target="_blank" rel="noopener"
+            >GitHub</a
+          >
+        </div>
+      </div>
+    </footer>
+
+    <script src="../../js/navbar.js"></script>
+    <script src="/explore/dsa/dsa-js/index.js"></script>
+    <script src="/js/musicplayer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,49 @@
+/* --- Parallax Background --- */
+.parallax-bg {
+    position: fixed;
+    top: -5%; /* Extra height to prevent gaps during movement */
+    left: -5%;
+    width: 110%; 
+    height: 110%;
+    background-image: url('../images/splash.jpg'); /* Your main background */
+    background-size: cover;
+    background-position: center;
+    z-index: -1; 
+    will-change: transform;
+    filter: brightness(0.4); /* Makes background darker so text pops */
+}
+
+/* --- Glassmorphism Cards --- */
+.glass-card {
+    position: relative;
+    background: rgba(255, 255, 255, 0.03);
+    backdrop-filter: blur(10px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: 20px;
+    padding: 20px;
+    overflow: hidden;
+    transition: transform 0.3s ease, border-color 0.3s ease;
+}
+
+.glass-card:hover {
+    border-color: rgba(255, 77, 77, 0.4); /* Glow color on hover */
+    transform: translateY(-5px);
+}
+
+/* The Mouse Glow effect */
+.glass-glow {
+    position: absolute;
+    width: 400px;
+    height: 400px;
+    background: radial-gradient(circle, rgba(255, 77, 77, 0.12) 0%, transparent 70%);
+    top: 0;
+    left: 0;
+    pointer-events: none;
+    transform: translate(-50%, -50%);
+    opacity: 0;
+    transition: opacity 0.4s ease;
+}
+
+.glass-card:hover .glass-glow {
+    opacity: 1;
+}
